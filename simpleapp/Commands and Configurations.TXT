@@ -1,0 +1,39 @@
+1. Eclipse
+2. Python 2.7.18 (for cassandra)
+3. Java 64 bit
+
+
+4. Cassandra
+commands:
+a. cassandra
+b. cqlsh : to open terminal to write cql(CRUD)
+
+
+5. Zookeeper
+commands:
+a. zkserver
+
+
+6. Kafka (binary download)
+go to the folder: C:\kafka_2.12-2.5.0\bin\windows then execute
+commands:
+a. zookeeper-server-start.bat C:\kafka_2.12-2.5.0\config\zookeeper.properties
+b. kafka-server-start.bat C:\kafka_2.12-2.5.0\config\server.properties
+
+
+7. Sonarqube
+a. download sonarqube and sonarqube scanner
+b. Add sonarqube scanner bin to path to recognize command 'sonar-scanner.bat'
+b. run sonar cube server in 'C:\Program Files\sonarqube-8.4.1.35646\bin\windows-x86-64' folder with command 'startsonar.bat'
+c. Edit sonar-scanner.property in 'C:\Program Files\sonar-scanner-4.4.0.2170-windows\conf' and add project details as:
+sonar.projectKey=Hello                                        //any name
+sonar.projectName=Hello                                       //any name
+sonar.projectVersion=1.0                                      //since 1st version
+sonar.sources=C:/Users/HP/eclipse-workspace/Hello/src/Hello   //path to the project folder to scan for generating report
+d. Go to project folder: C:/Users/HP/eclipse-workspace/Hello
+e. run command 'sonar-scanner.bat'
+f. Check report on localhost/9000
+
+
+8. Heroku
+donwload the heroku CLI
