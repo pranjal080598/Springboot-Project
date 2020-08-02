@@ -1,10 +1,10 @@
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
+import { Form,Button } from 'react-bootstrap';
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
-import { Form,Button } from 'react-bootstrap';
-export class Login extends Component {
+export class Signup extends Component {
 constructor(props){
   super(props);
   this.state={
@@ -14,7 +14,7 @@ constructor(props){
  }
 render() {
     return (
-        
+      
           <div class="text-center">
 <Form>
   <Form.Group controlId="formBasicEmail">
@@ -29,7 +29,10 @@ render() {
     <Form.Control type="password" placeholder="Password" />
   </Form.Group>
   
-  
+  <Form.Group controlId="formConfirmPassword">
+    <Form.Label>Confirm Password</Form.Label>
+    <Form.Control type="password" placeholder="Confirm Password" />
+  </Form.Group>
  
   <Button variant="primary" type="submit">
     Submit
@@ -47,5 +50,4 @@ render() {
 const style = {
  margin: 15,
 };
-
-export default Login;
+export default Signup;
