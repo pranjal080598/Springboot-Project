@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';  
+import { Navbar, Nav, NavItem, NavDropdown, Container, Col } from 'react-bootstrap';  
 import React, { Component } from 'react'  
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
@@ -17,22 +17,17 @@ export class Footer extends Component {
         render() {  
   
                 return ( 
-                  <Styles>
-                    <div class="fixed-bottom">
-					
-            <footer class="page-footer">
-
-  
- <div class="footer-copyright text-center py-3">
+                 <Navbar fixed="bottom" bg="dark" variant="dark">
+                   <Container>
+                     <Col lg={12} className="text-center text-muted">
+                       <div>
    Made with &hearts; by Pranjal
 
   </div>
-  
 
-</footer>
-	</div>
-          </Styles> 
-
+                     </Col>
+                   </Container>
+                 </Navbar>
 				)
 				}
 			}

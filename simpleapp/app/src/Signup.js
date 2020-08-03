@@ -2,39 +2,60 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Form,Button } from 'react-bootstrap';
+
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 export class Signup extends Component {
+
 constructor(props){
   super(props);
   this.state={
-  username:'',
-  password:''
+  email:'',
+  password:'',
+  cpassword:''
+  };
+  this.submitSignup=this.submitSignup.bind(this);
+  this.formChange=this.formChange.bind(this);
+}
+  
+  submitSignup(event) 
+  {
+    alert(this.state.email);
+    alert(this.state.password);
+    alert(this.state.cpassword);
+    event.preventDefault();
   }
- }
+  formChange(event)
+  {
+    this.setState({
+      // map key value
+      [event.target.name]:event.target.value    
+    });
+  }
+
 render() {
     return (
       
           <div class="text-center">
-<Form>
+<Form onSubmit={this.submitSignup} id="signup">
   <Form.Group controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
+    <Form.Label>Email</Form.Label>
+    <Form.Control required type="email" placeholder="Enter email" name="email" value={this.state.email}  onChange={this.formChange} />
    
   </Form.Group>
 
 
   <Form.Group controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
+    <Form.Control required type="password" placeholder="Password" name="password" value={this.state.password}  onChange={this.formChange}/>
   </Form.Group>
   
   <Form.Group controlId="formConfirmPassword">
     <Form.Label>Confirm Password</Form.Label>
-    <Form.Control type="password" placeholder="Confirm Password" />
+    <Form.Control type="password" placeholder="Confirm Password" name="cpassword" value={this.state.cpassword}  onChange={this.formChange}/>
   </Form.Group>
  
-  <Button variant="primary" type="submit">
+  <Button variant="success" type="submit">
     Submit
   </Button>
 </Form>

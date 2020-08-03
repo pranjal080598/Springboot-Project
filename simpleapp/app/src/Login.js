@@ -8,7 +8,7 @@ export class Login extends Component {
 constructor(props){
   super(props);
   this.state={
-  username:'',
+  email:'',
   password:''
   }
  }
@@ -18,7 +18,7 @@ render() {
           <div class="text-center">
 <Form>
   <Form.Group controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
+    <Form.Label>Email</Form.Label>
     <Form.Control type="email" placeholder="Enter email" />
    
   </Form.Group>

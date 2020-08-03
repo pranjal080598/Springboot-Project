@@ -56,7 +56,13 @@ export const NavigationBar = () => (
               <Link to="/signup">Sign Up</Link>
             </Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link to="/signedup">Sign Up Details</Link>
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
+
       </Navbar.Collapse>
     </Navbar>
   </Styles >

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './Home';
 import { Signup} from './Signup';
+import { Signedup} from './Signedup';
 import { Services } from './Services';
 import { Contact } from './Contact';
 import { Login } from './Login';
@@ -17,7 +18,7 @@ class App extends Component {
       <React.Fragment>
         <Router>
           <NavigationBar />
-          <Footer />
+        
           {/* <Jumbotron /> */}
           <Layout>
             
@@ -27,9 +28,11 @@ class App extends Component {
               <Route path="/services" component={Services} />
               <Route path="/contact" component={Contact} />
               <Route path="/signup" component={Signup} />
+              <Route path="/signedup" component={Signedup} />
               <Route component={NoMatch} />
             </Switch>
           </Layout>
+            <Footer />
         </Router>
       </React.Fragment>
     );
