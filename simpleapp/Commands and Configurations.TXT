@@ -34,6 +34,12 @@ d. Go to project folder: C:/Users/HP/eclipse-workspace/Hello
 e. run command 'sonar-scanner.bat'
 f. Check report on localhost/9000
 
-
 8. Heroku
 donwload the heroku CLI
+
+9. Elastic
+bin/elasticsearch
+
+10.Kibana
+bin/kibana
+http://localhost:5601
